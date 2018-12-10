@@ -1,7 +1,12 @@
-import Icons from './Icons'
+import Vue from 'vue'
+import Icons from './Icons.vue'
 
-Icons.install = (Vue) => {
-  Vue.component(Icons.name, Icons)
+const Components = {
+  Icons
 }
 
-export default Icons
+Object.keys(Components).forEach(name => {
+  Vue.component(name, Components[name])
+})
+
+export default Components

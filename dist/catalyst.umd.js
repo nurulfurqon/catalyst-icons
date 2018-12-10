@@ -2442,6 +2442,19 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
 var es6_function_name = __webpack_require__("7f7f");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
+var es6_array_iterator = __webpack_require__("cadf");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
+var es6_object_keys = __webpack_require__("456d");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
+var web_dom_iterable = __webpack_require__("ac6a");
+
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7aea4072-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Icons.vue?vue&type=template&id=6df8170a&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svgicon',{attrs:{"name":_vm.icon,"color":_vm.color ? _vm.colors[_vm.color] : null,"width":_vm.sizes[_vm.size],"height":_vm.sizes[_vm.size]}})}
 var staticRenderFns = []
@@ -2449,21 +2462,8 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/Icons.vue?vue&type=template&id=6df8170a&scoped=true&
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
-var web_dom_iterable = __webpack_require__("ac6a");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
-var es6_array_iterator = __webpack_require__("cadf");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
-var es6_object_keys = __webpack_require__("456d");
-
 // EXTERNAL MODULE: ./node_modules/vue-svgicon/dist/polyfill.js
 var polyfill = __webpack_require__("6bbc");
-
-// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
-var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
 // EXTERNAL MODULE: ./node_modules/vue-svgicon/dist/components/svgicon.common.js
 var svgicon_common = __webpack_require__("038a");
@@ -2664,11 +2664,16 @@ component.options.__file = "Icons.vue"
 
 
 
-Icons.install = function (Vue) {
-  Vue.component(Icons.name, Icons);
-};
 
-/* harmony default export */ var components = (Icons);
+
+
+var Components = {
+  Icons: Icons
+};
+Object.keys(Components).forEach(function (name) {
+  external_commonjs_vue_commonjs2_vue_root_Vue_default.a.component(name, Components[name]);
+});
+/* harmony default export */ var components = (Components);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
