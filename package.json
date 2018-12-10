@@ -1,11 +1,15 @@
 {
-  "name": "catalyst-icons",
+  "name": "@catalyst/catalyst-icons",
   "version": "0.1.0",
-  "private": true,
+  "main": "./dist/catalyst.common.js",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-icon": "vue-cli-service build --target lib --name catalyst ./src/components/index.js",
+    "generate-icon": "vsvg -s ./src/assets/icon-svg -t ./src/components/icons && node scripts/svg/generate-name-icon.js",
+    "kickstart": "npm run generate-icon && npm run build-icon"
   },
   "dependencies": {
     "vue": "^2.5.17"
@@ -20,6 +24,14 @@
     "eslint-plugin-vue": "^5.0.0-0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "vue-svgicon": "^3.2.2",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ]
 }
